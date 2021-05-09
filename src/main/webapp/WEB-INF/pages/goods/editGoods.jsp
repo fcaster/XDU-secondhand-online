@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>修改商品</title>
+    <title>modify goods</title>
     <link rel="stylesheet" href="<%=basePath%>css/font-awesome.min.css" />
     <link rel="stylesheet" href="<%=basePath%>css/userhome.css" />
     <link rel="stylesheet" href="<%=basePath%>css/user.css" />
@@ -51,43 +51,43 @@
                     <img src="">
                 </div>
                 <span class="name">${cur_user.username}</span>
-                <span class="school">鲁东大学</span>
-                <span class="name">闲置数量：${cur_user.goodsNum}</span>
+                <span class="school">xdu</span>
+                <span class="name">Number of idle：${cur_user.goodsNum}</span>
             </div>
             <div class="home_nav">
                 <ul>
                     <a href="">
                         <li class="notice">
                             <div></div>
-                            <span>我的消息</span>
+                            <span>My message</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="">
                         <li class="fri">
                             <div></div>
-                            <span>关注列表</span>
+                            <span>interest list</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/basic">
                         <li class="set">
                             <div></div>
-                            <span>个人设置</span>
+                            <span>personal setting</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/goods/publishGoods">
                         <li class="store">
                             <div></div>
-                            <span>发布物品</span>
+                            <span>Release goods</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/allGoods">
                         <li class="second">
                             <div></div>
-                            <span>我的闲置</span>
+                            <span>My spare</span>
                             <strong></strong>
                         </li>
                     </a>
@@ -102,36 +102,36 @@
         <div id="user_content">
             <div class="basic">
                 <form:form action="/goods/editGoodsSubmit" method="post" role="form" enctype="multipart/form-data">
-                    <h1 style="margin-left: 210px;">修改物品信息</h1><hr />
+                    <h1 style="margin-left: 210px;">Modify item information</h1><hr />
                     <div class="changeinfo">
-                        <span>物品名：</span>
-                        <input class="in_info" type="text" name="name" placeholder="请输入物品名" value="${goodsExtend.goods.name}"/>
-                        <span>(*必填)</span>
+                        <span>Item name：</span>
+                        <input class="in_info" type="text" name="name" placeholder="Please enter item name" value="${goodsExtend.goods.name}"/>
+                        <span>(*required)</span>
                     </div>
                     <div class="changeinfo">
-                        <span>出售价格：</span>
-                        <input class="in_info" type="text" name="price" placeholder="请输入出售价格" value="${goodsExtend.goods.price}"/>
-                       <span>(*必填)</span>
+                        <span>trading value：</span>
+                        <input class="in_info" type="text" name="price" placeholder="Please enter the selling price" value="${goodsExtend.goods.price}"/>
+                       <span>(*required)</span>
                    </div>
                    <div class="changeinfo">
-                        <span>原价：</span>
-                        <input class="in_info" type="text" name="realPrice" placeholder="请输入商品原价" value="${goodsExtend.goods.realPrice}"/>
-                        <span id="checkphone">(*选填,请如实填写)</span>
+                        <span>original cost：</span>
+                        <input class="in_info" type="text" name="realPrice" placeholder="Please enter the original price" value="${goodsExtend.goods.realPrice}"/>
+                        <span id="checkphone">(*required,Please fill in truthfully)</span>
                      </div>
                      <div class="changeinfo">
-                        <span>物品类别：</span>
+                        <span>goods cateogory：</span>
                         <select class="in_info" name="catelogId">
-                            <option value="1">闲置数码</option>
-                            <option value="2">校园代步</option>
-                            <option value="3">电器日用</option>
-                            <option value="4">图书教材</option>
-                            <option value="5">美妆衣物</option>
-                            <option value="6">运动棋牌</option>
-                            <option value="7">票券小物</option>
+                            <option value="1">Idle digital</option>
+                            <option value="2">Campus walking</option>
+                            <option value="3">Electrical appliances for daily use</option>
+                            <option value="4">Books teaching material</option>
+                            <option value="5">Beauty makeup clothing</option>
+                            <option value="6">Sports a chess</option>
+                            <option value="7">Ticket small things</option>
                         </select>
                     </div>
                     <div class="changeinfo" id="dir">
-                        <span>商品描述：</span>
+                        <span>product description：</span>
                         <div class="sha">
                             <div class="publ">
                                 <div class="pub_con">
@@ -145,7 +145,7 @@
                     <br />
                     <hr />
                     <div class="changeinfo">
-                        <span>图片：</span>
+                        <span>picture：</span>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-1">
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" class="setting-save" value="提交修改" style="margin-top: 20px;background-color: blue;"/>
+                    <input type="submit" class="setting-save" value="Commit changes" style="margin-top: 20px;background-color: blue;"/>
                 </form:form>
             </div>
             <!--
@@ -172,8 +172,8 @@
             -->
             <div class="recommend">
                 <div class="title">
-                    <span class="text">可能认识的人</span>
-                    <span class="change">换一组</span>
+                    <span class="text">Someone else</span>
+                    <span class="change">In a group</span>
                     <span class="underline"></span>
                 </div>
                 <ul>
@@ -195,7 +195,7 @@
                         <a href="" class="head_img">
                             <img src="<%=basePath%>img/photo3.jpg">
                         </a>
-                        <span>策马奔腾hly</span>
+                        <span>horse galloping</span>
                         <div class="fa fa-plus-square"></div>
                     </li>
                     <li>

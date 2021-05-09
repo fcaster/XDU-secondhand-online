@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>鲁大二手工坊</title>
+    <title>XDU Second-hand Online</title>
     <link rel="stylesheet" href="<%=basePath%>css/index.css" />
     <script type="text/javascript" src="<%=basePath%>js/jquery.js" ></script>
     <script type="text/javascript" src="<%=basePath%>js/materialize.min.js" ></script>
@@ -54,14 +54,13 @@
     <nav class="white nav1">
         <div class="nav-wrapper">
             <a href="<%=basePath%>goods/homeGoods" class="logo">
-                <em class="em1">鲁大</em>
-                <em class="em2">二手工坊</em>
-                <em class="em3">ldu.market</em>
+                <em class="em1">XDU</em>
+                <em class="em2">Second-hand Online</em>
             </a>
             <div class="nav-wrapper search-bar">
                 <form ng-submit="search()" class="ng-pristine ng-invalid ng-invalid-required" action="">
                     <div class="input-field">
-                        <input id="search" name="str" value="<c:out value="${search}"></c:out>" placeholder="搜点什么吧233..." style="height: 40px;"
+                        <input id="search" name="str" value="<c:out value="${search}"></c:out>" placeholder="Search" style="height: 40px;"
                                class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"/>
                         <label for="search" class="active">
                             <i ng-click="search()" class="iconfont"></i>
@@ -73,18 +72,18 @@
                 <c:if test="${empty cur_user}">
                     <li class="publish-btn">
                         <button ng-click="showLogin()" data-position="bottom" data-delay="50"
-                                data-tooltip="需要先登录哦！" class="red lighten-1 waves-effect waves-light btn" data-tooltip-id="510d3084-e666-f82f-3655-5eae4304a83a"	>
-                            我要发布</button>
+                                data-tooltip="Login Please!" class="red lighten-1 waves-effect waves-light btn" data-tooltip-id="510d3084-e666-f82f-3655-5eae4304a83a"	>
+                            Post Goods</button>
                     </li>
                 </c:if>
                 <c:if test="${!empty cur_user}">
                     <li class="publish-btn">
                         <button data-position="bottom" class="red lighten-1 waves-effect waves-light btn">
-                            <a href="/goods/publishGoods">我要发布</a>
+                            <a href="/goods/publishGoods">Post Goods</a>
                         </button>
                     </li>
                     <li>
-                        <a href="/user/allGoods">我发布的商品</a>
+                        <a href="/user/allGoods">Goods posted by myself</a>
                     </li>
                     <li>
                         <a>${cur_user.username}</a>
@@ -99,20 +98,20 @@
                         </a>
                         <div class="more-vert">
                             <ul class="dropdown-content">
-                                <li><a href="/user/home">个人中心</a></li>
-                                <li><a>消息</a></li>
-                                <li><a onclick="ChangeName()">更改用户名</a></li>
-                                <li><a href="/user/logout">退出登录</a></li>
+                                <li><a href="/user/home">Personal Center</a></li>
+                                <li><a>Message</a></li>
+                                <li><a onclick="ChangeName()">Change Username</a></li>
+                                <li><a href="/user/logout">Logout</a></li>
                             </ul>
                         </div>
                     </li>
                 </c:if>
                 <c:if test="${empty cur_user}">
                     <li>
-                        <a onclick="showLogin()">登录</a>
+                        <a onclick="showLogin()">Login</a>
                     </li>
                     <li>
-                        <a onclick="showSignup()">注册</a>
+                        <a onclick="showSignup()">Register</a>
                     </li>
                 </c:if>
             </ul>
@@ -134,21 +133,21 @@
                 <form:form action="/user/login" method="post" commandName="user" role="form">
                     <div class="input-field col s12">
                         <input type="text" name="phone" required="required" pattern="^1[0-9]{10}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
-                        <label>手机</label>
+                        <label>Phone Number</label>
                     </div>
                     <div class="input-field col s12">
                         <input type="password" name="password" required="required" class="validate ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" />
-                        <label>密码</label>
-                        <a ng-click="showForget()" class="forget-btn">忘记密码？</a>
+                        <label>Password</label>
+                        <a ng-click="showForget()" class="forget-btn">Forget Password?</a>
                     </div>
                     <button type="submit" class="waves-effect waves-light btn login-btn red lighten-1">
                         <i class="iconfont left"></i>
                         <em>登录</em>
                     </button>
                     <div class="col s12 signup-area">
-                        <em>没有账号？赶快</em>
-                        <a onclick="showSignup()" class="signup-btn">注册</a>
-                        <em>吧！</em>
+                        <em>Don not have account?</em>
+                        <a onclick="showSignup()" class="signup-btn">Register</a>
+                        <em> Now</em>
                     </div>
                 </form:form>
             </div>
@@ -174,21 +173,21 @@
                     </div>
                     <div class="input-field col s12">
                         <input type="text" name="phone" required="required" pattern="^1[0-9]{10}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
-                        <label>手机</label>
+                        <label>Phone Number</label>
                     </div>
                     <div class="input-field col s12">
                         <input type="password" name="password" required="required" class="validate ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" />
-                        <label>密码</label>
+                        <label>Password</label>
                     </div>
                     <div ng-show="checkTelIsShow" class="col s12">
                         <button type="submit" class="waves-effect waves-light btn verify-btn red lighten-1">
                             <i class="iconfont left"></i>
-                            <em>点击注册</em>
+                            <em>Click to Register</em>
                         </button>
                     </div>
                     <div ng-show="checkTelIsShow" class="login-area col s12">
-                        <em>已有账号？去</em>
-                        <a onclick="showLogin()">登录</a>
+                        <em>Have got an account?</em>
+                        <a onclick="showLogin()">Login</a>
                     </div>
                 </form:form>
             </div>
@@ -201,17 +200,17 @@
         <div class="publish-box z-depth-4">
             <div class="row">
                 <div class="col s12 title">
-                    <h1>修改用户名</h1>
+                    <h1>Change Username</h1>
                 </div>
                 <form:form action="/user/changeName" method="post" commandName="user" role="form">
                     <div class="input-field col s12">
                         <input type="text" name="username" required="required" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
-                        <label>修改用户名</label>
+                        <label>Change Username</label>
                     </div>
                     <div ng-show="checkTelIsShow" class="col s12">
                         <button class="waves-effect waves-light btn publish-btn red lighten-1">
                             <i class="iconfont left"></i>
-                            <em>确认</em>
+                            <em>Confirm</em>
                         </button>
                     </div>
                 </form:form>
@@ -228,55 +227,55 @@
     <li ng-class="{true: 'active'}[isAll]">
         <a href="<%=basePath%>goods/catelog/1" class="index">
             <img src="<%=basePath%>img/index.png">
-            <em>最新发布</em>
+            <em>Latest Goods</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isDigital]">
         <a href="/goods/catelog/1" class="digital">
             <img src="<%=basePath%>img/digital.png"  />
-            <em>闲置数码</em>
+            <em>Digital</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isRide]">
         <a href="<%=basePath%>goods/catelog/2" class="ride">
             <img src="<%=basePath%>img/ride.png"/>
-            <em>校园代步</em>
+            <em>Campus</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isCommodity]">
         <a href="<%=basePath%>goods/catelog/3" class="commodity">
             <img src="<%=basePath%>img/commodity.png"/>
-            <em>电器日用</em>
+            <em>Electric</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isBook]">
         <a href="<%=basePath%>goods/catelog/4" class="book">
             <img src="<%=basePath%>img/book.png"/>
-            <em>图书教材</em>
+            <em>Books</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isMakeup]">
         <a href="<%=basePath%>goods/catelog/5" class="makeup">
             <img src="<%=basePath%>img/makeup.png"/>
-            <em>美妆衣物</em>
+            <em>Cosmetics</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isSport]">
         <a href="<%=basePath%>goods/catelog/6" class="sport">
             <img src="<%=basePath%>img/sport.png"/>
-            <em>运动棋牌</em>
+            <em>Sports/Chess</em>
         </a>
     </li>
     <li ng-class="{true: 'active'}[isSmallthing]">
         <a href="<%=basePath%>goods/catelog/7" class="smallthing">
             <img src="<%=basePath%>img/smallthing.png"/>
-            <em>票券小物</em>
+            <em>Ticket</em>
         </a>
     </li>
     <div class="info">
-        <a href="" target="_blank">关于我们</a><em>-</em>
-        <a href="">联系我们</a>
-        <p>©2017 LDUACM工作室</p>
+        <a href="" target="_blank"About Us</a><em>-</em>
+        <a href="">Contact Me</a>
+        <p>XDU</p>
     </div>
 </div>
 <!--
@@ -308,7 +307,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>XDU</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>

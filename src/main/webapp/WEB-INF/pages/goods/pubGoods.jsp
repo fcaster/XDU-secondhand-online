@@ -54,43 +54,43 @@
                     <img src="">
                 </div>
                 <span class="name">${cur_user.username}</span>
-                <span class="school">鲁东大学</span>
-                <span class="name">闲置数量：${cur_user.goodsNum}</span>
+                <span class="school">XDU</span>
+                <span class="name">Idle quantity:${cur_user.goodsNum}</span>
             </div>
             <div class="home_nav">
                 <ul>
                     <a href="">
                         <li class="notice">
                             <div></div>
-                            <span>我的消息</span>
+                            <span>Messages</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="">
                         <li class="fri">
                             <div></div>
-                            <span>关注列表</span>
+                            <span>Follow list</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/basic">
                         <li class="set">
                             <div></div>
-                            <span>个人设置</span>
+                            <span>Settings</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/goods/publishGoods">
                         <li class="store">
                             <div></div>
-                            <span>发布物品</span>
+                            <span>Post items</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/allGoods">
                         <li class="second">
                             <div></div>
-                            <span>我的闲置</span>
+                            <span>My idle items</span>
                             <strong></strong>
                         </li>
                     </a>
@@ -105,36 +105,36 @@
         <div id="user_content">
             <div class="basic">
                 <form:form action="/goods/publishGoodsSubmit" method="post" role="form" enctype="multipart/form-data">
-                    <h1 style="margin-left: 210px;">发布物品</h1><hr />
+                    <h1 style="margin-left: 210px;">Posts Items</h1><hr />
                     <div class="changeinfo">
-                        <span>物品名：</span>
-                        <input class="in_info" type="text" name="name" placeholder="请输入物品名"/>
-                        <span>(*必填)</span>
+                        <span>Name:</span>
+                        <input class="in_info" type="text" name="name" placeholder="please input name"/>
+                        <span>(*Required)</span>
                     </div>
                     <div class="changeinfo">
-                        <span>出售价格：</span>
-                        <input class="in_info" type="text" name="price" placeholder="请输入出售价格"/>
-                        <span>(*必填)</span>
+                        <span>Price:</span>
+                        <input class="in_info" type="text" name="price" placeholder="Please enter the  price"/>
+                        <span>(*Required)</span>
                     </div>
                     <div class="changeinfo">
-                        <span>原价：</span>
-                        <input class="in_info" type="text" name="realPrice" placeholder="请输入商品原价"/>
-                        <span id="checkphone">(*选填,请如实填写)</span>
+                        <span>original price：</span>
+                        <input class="in_info" type="text" name="realPrice" placeholder="Please enter the original price of the product"/>
+                        <span id="checkphone">(*Optional)</span>
                     </div>
                     <div class="changeinfo">
-                        <span>物品类别：</span>
+                        <span>Item category:</span>
                         <select class="in_info" name="catelogId">
-                            <option value="1">闲置数码</option>
-                            <option value="2">校园代步</option>
-                            <option value="3">电器日用</option>
-                            <option value="4">图书教材</option>
-                            <option value="5">美妆衣物</option>
-                            <option value="6">运动棋牌</option>
-                            <option value="7">票券小物</option>
+                            <option value="1">Idle digital</option>
+                            <option value="2">Walking on campus</option>
+                            <option value="3">Daily use </option>
+                            <option value="4">Books</option>
+                            <option value="5">Clothes</option>
+                            <option value="6">Sports</option>
+                            <option value="7">Tickets</option>
                         </select>
                     </div>
                     <div class="changeinfo" id="dir">
-                        <span>商品描述：</span>
+                        <span>description：</span>
                         <div class="sha">
                             <div class="publ">
                                 <div class="pub_con">
@@ -148,7 +148,7 @@
                     <br />
                     <hr />
                     <div class="changeinfo">
-                        <span>商品图片：</span>
+                        <span>Pictures：</span>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-1">
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" class="setting-save" value="发布物品" style="margin-top: 20px;background-color: blue;"/>
+                    <input type="submit" class="setting-save" value="Post items" style="margin-top: 20px;background-color: blue;"/>
                 </form:form>
             </div>
             <!--
@@ -172,8 +172,8 @@
             -->
             <div class="recommend">
                 <div class="title">
-                    <span class="text">可能认识的人</span>
-                    <span class="change">换一组</span>
+                    <span class="text">People you might know</span>
+                    <span class="change">change another</span>
                     <span class="underline"></span>
                 </div>
                 <ul>
@@ -195,7 +195,7 @@
                         <a href="" class="head_img">
                             <img src="<%=basePath%>img/photo3.jpg">
                         </a>
-                        <span>策马奔腾hly</span>
+                        <span leo</span>
                         <div class="fa fa-plus-square"></div>
                     </li>
                     <li>
@@ -236,7 +236,7 @@
         enctype: 'multipart/form-data',
         validateInitialCount:true,
         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
-        msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+        msgFilesTooMany: "Select the number of files to upload({n}) Exceeded{{m}！",
         allowedFileTypes: ['image'],//配置允许文件上传的类型
         allowedPreviewTypes : [ 'image' ],//配置所有的被预览文件类型
         allowedPreviewMimeTypes : [ 'jpg', 'png', 'gif' ],//控制被预览的所有mime类型

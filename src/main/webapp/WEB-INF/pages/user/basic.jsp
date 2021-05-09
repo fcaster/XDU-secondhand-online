@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>个人设置</title>
+    <title>Personal Settings</title>
     <link rel="stylesheet" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" href="../css/userhome.css" />
     <link rel="stylesheet" href="../css/user.css" />
@@ -43,43 +43,43 @@
                     <img src="<%=basePath%>img/findfun.png">
                 </div>
                 <span class="name">${cur_user.username}</span>
-                <span class="school">鲁东大学</span>
-                <span class="name">闲置数量：${cur_user.goodsNum}</span>
+                <span class="school">XDU</span>
+                <span class="name">Spare Amount：${cur_user.goodsNum}</span>
             </div>
             <div class="home_nav">
                 <ul>
                     <a href="">
                         <li class="notice">
                             <div></div>
-                            <span>我的消息</span>
+                            <span>Messages</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="">
                         <li class="fri">
                             <div></div>
-                            <span>关注列表</span>
+                            <span>WatchList</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/basic">
                         <li class="set">
                             <div></div>
-                            <span>个人设置</span>
+                            <span>Settings</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/goods/publishGoods">
                         <li class="store">
                             <div></div>
-                            <span>发布物品</span>
+                            <span>Goods</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/allGoods">
                         <li class="second">
                             <div></div>
-                            <span>我的闲置</span>
+                            <span>Spare Goods</span>
                             <strong></strong>
                         </li>
                     </a>
@@ -94,25 +94,25 @@
         <div id="user_content">
             <div class="basic">
                 <form:form action="/user/updateInfo" method="post" commandName="user" role="form">
-                    <h1>完善与修改个人信息</h1><hr />
+                    <h1>Complete&Modify Info</h1><hr />
                     <div class="changeinfo">
-                        <span>昵称：</span>
-                        <input class="in_info" type="text" name="username" placeholder="请输入昵称" value="${cur_user.username}"/>
+                        <span>Name：</span>
+                        <input class="in_info" type="text" name="username" placeholder="Please Input Your Name" value="${cur_user.username}"/>
                     </div><hr />
                     <div class="changeinfo">
-                        <span>开通时间：</span>
+                        <span>Register Time：</span>
                         <input class="in_info" type="text" name="createAt" value="${cur_user.createAt}" readonly="true"/>
                     </div><hr />
                     <div class="changeinfo">
-                        <span>手机号码：</span>
+                        <span>Phone Number：</span>
                         <input class="in_info" type="text" name="phone" value="${cur_user.phone}" readonly="true"/>
-                        <span id="checkphone">已验证</span>
+                        <span id="checkphone">Verified</span>
                     </div><hr />
                     <div class="changeinfo">
                         <span>QQ：</span>
-                        <input class="in_info" type="text" name="qq" placeholder="请输入QQ" value="${cur_user.qq}"/>
+                        <input class="in_info" type="text" name="qq" placeholder="Please Input Your QQ Number" value="${cur_user.qq}"/>
                     </div>
-                    <input type="submit" class="setting-save" value="保存修改信息" />
+                    <input type="submit" class="setting-save" value="Save&Modify Infomation" />
                 </form:form>
             </div>
             <!--
@@ -122,8 +122,8 @@
             -->
             <div class="recommend">
                 <div class="title">
-                    <span class="text">可能认识的人</span>
-                    <span class="change">换一组</span>
+                    <span class="text">Someone You Might Know</span>
+                    <span class="change">Another Group</span>
                     <span class="underline"></span>
                 </div>
                 <ul>

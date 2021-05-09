@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>个人中心</title>
+    <title>Personal Center</title>
     <link rel="stylesheet" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" href="../css/emoji.css" />
     <link rel="stylesheet" href="../css/userhome.css" />
@@ -44,44 +44,44 @@
                     <img src="">
                 </div>
                 <span class="name">${cur_urser.username}</span>
-                <span class="school">鲁东大学</span>
-                <span class="name">闲置数量：${cur_user.goodsNum}</span>
-                <span class="fa fa-share-alt">"快去分享一下"</span>
+                <span class="school">XDU</span>
+                <span class="name">Spare Amount：${cur_user.goodsNum}</span>
+                <span class="fa fa-share-alt">"Share"</span>
             </div>
             <div class="home_nav">
                 <ul>
                     <a href="">
                         <li class="notice">
                             <div></div>
-                            <span>我的消息</span>
+                            <span>Messages</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="">
                         <li class="fri">
                             <div></div>
-                            <span>关注列表</span>
+                            <span>WatchList</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/basic">
                         <li class="set">
                             <div></div>
-                            <span>个人设置</span>
+                            <span>Settings</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/goods/publishGoods">
                         <li class="store">
                             <div></div>
-                            <span>发布物品</span>
+                            <span>Goods</span>
                             <strong></strong>
                         </li>
                     </a>
                     <a href="/user/allGoods">
                         <li class="second">
                             <div></div>
-                            <span>我的闲置</span>
+                            <span>My Spare</span>
                             <strong></strong>
                         </li>
                     </a>
@@ -113,7 +113,7 @@
                             <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png" multiple/>
                         </span>
                         <div class="checkbox">
-                            <button>发 布</button>
+                            <button>Publish</button>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                 -->
                 <div class="share_content">
                     <div class="no_share">
-                        <span>没有任何内容，去逛逛其它的吧！</span>
+                        <span>There is nothing here</span>
                     </div>
                 </div>
             </div>
@@ -135,8 +135,8 @@
             -->
             <div class="recommend">
                 <div class="title">
-                    <span class="text">可能认识的人</span>
-                    <span class="change">换一组</span>
+                    <span class="text">Someone You Might Know</span>
+                    <span class="change">Another Group</span>
                     <span class="underline"></span>
                 </div>
                 <ul>

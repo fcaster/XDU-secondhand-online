@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>Squirrel后台管理系统</title>
+	<title>Squirrel Background management system</title>
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/jquery.bootgrid.min.css">
@@ -22,7 +22,7 @@
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar">*****</span>
 						</button>
-						<a class="navbar-brand" href="#">Squirrel后台管理系统</a>
+						<a class="navbar-brand" href="#">Squirrel Background management system</a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
@@ -35,12 +35,12 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<h2>Squirrel用户信息</h2>
-			<a class="btn btn-primary" href="/admin/exportUser">导出数据为excel</a>
-			<a class="btn btn-primary" href="#" id="add">添加用户</a>
+			<h2>Squirrel user information</h2>
+			<a class="btn btn-primary" href="/admin/exportUser">Export data as excel</a>
+			<a class="btn btn-primary" href="#" id="add">Add user</a>
 			<div class="btn-group">
 				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					查看接口数据 <span class="caret"></span>
+					View interface data <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><a href="/admin/users?current=1&rowCount=10&sort[sender]=asc&searchPhrase=&id=b0df282a-0d67-40e5-8558-c9e93b7befed" target="_blank">JSON</a></li>
@@ -50,12 +50,12 @@
 				<thead>
 				<tr>
 					<th data-column-id="id"  data-identifier="true" data-type="numeric">序号</th>
-					<th data-column-id="phone">手机号</th>
-					<th data-column-id="username">姓名</th>
+					<th data-column-id="phone">phone number</th>
+					<th data-column-id="username">name</th>
 					<th data-column-id="qq">QQ</th>
-					<th data-column-id="createAt">开通时间</th>
-					<th data-column-id="goodsNum">商品数量</th>
-					<th data-column-id="power">用户权限</th>
+					<th data-column-id="createAt">Opening time</th>
+					<th data-column-id="goodsNum">Quantity of goods</th>
+					<th data-column-id="power">User rights</th>
 					<th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
 				</tr>
 				</thead>
@@ -77,8 +77,8 @@
             formatters: {
                 "commands": function(column, row)
                 {
-                    return "<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"" + row.id + "\">编辑<span class=\"fa fa-pencil\"></span></button> " +
-                        "<button type=\"button\" class=\"btn btn-xs btn-default command-delete\" data-row-id=\"" + row.id + "\">删除<span class=\"fa fa-trash-o\"></span></button>";
+                    return "<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"" + row.id + "\">edit<span class=\"fa fa-pencil\"></span></button> " +
+                        "<button type=\"button\" class=\"btn btn-xs btn-default command-delete\" data-row-id=\"" + row.id + "\">delete<span class=\"fa fa-trash-o\"></span></button>";
                 }
             }
         }).on("loaded.rs.jquery.bootgrid", function()
@@ -95,7 +95,7 @@
             {
 //                alert("You pressed delete on row: " + $(this).data("row-id"));
 //                $.post("/stu/delStu",{stuId:$(this).data("row-id")},function(){
-//                    alert("删除成功");
+//                    alert("delete successfully");
 //                    $("#grid-data").bootgrid("reload");
 //                });
             });
@@ -115,7 +115,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">信息修改</h4>
+				<h4 class="modal-title">Information modification</h4>
 			</div>
 			<form action="" method="post">
 				<div class="modal-body">
@@ -146,7 +146,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">添加用户</h4>
+				<h4 class="modal-title">Add user</h4>
 			</div>
 			<form action="" method="post">
 				<div class="modal-body">
