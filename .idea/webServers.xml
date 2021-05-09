@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5d8e264f-1db1-48f9-ab3d-e538ee717a1b" name="LinkServer">
+        <fileTransfer accessType="SFTP" host="39.102.33.77" port="22" sshConfigId="38bb317e-747a-4e17-a1d3-9e12887a970c" sshConfig="root@39.102.33.77:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
